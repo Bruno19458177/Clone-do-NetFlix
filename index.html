@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>NETFLIX CÓPIA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Estilo do site-->
+        <link href="style/main.css" rel="stylesheet">
+
+        <!--owl css- pegar a formatação do carrocel-->
+        <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+        <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
+        <!--Responsividade-->
+        <link rel=" stylesheet" href="style/resposive.css">
+
+    </head>
+    <body>
+        <header><!----header == cabeça/navbar----->
+            <div class="container">
+               
+                <h2 class="logo">HerosFlix</h2>             
+                               
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Documentários</a>
+                </nav>
+
+            </div>
+        </header>
+        <main>
+            <div class="filme-principal">
+                <div class="container">
+                    <h3 class="titulo_filme">Pacificador</h3>
+                    <p class="descricao">A série explorará as origens do Pacificador, um homem que acredita na paz a qualquer custo - não importa quantas pessoas ele tenha que matar para obtê-la.</p>
+              
+                <div class="botoes"><!--OBS: toda vez que é criado uma div<> ela já vem por padrão o DISPLAY-BLOCK-->
+                    <button role="button" class="botao"> <!---propriedade role="button" serve para quando em um tablet ou celular ou aonde seja renderizado ele reconheça que se trata de um botão----->
+                        <i class="fas fa-play"></i><!--Trás o icone de play do link externo do Font Awesome-->
+                        <a  href="javascript: abrir2();">  ASSISTIR AGORA </a> 
+                    </button>
+                    <button class="botao">                                          
+                        <i class="fas fa-info-circle"></i><!--para poder mexer na classe não necessariamente precisa estar declarada, neste caso pode se usar a Tag<i> direto para formatação css -->
+                            <a  href="javascript: abrir();"> MAIS INFORMAÇÕES   </a>   
+                            <!--para passar o mouse em cima e aparecer o pop-up basta colocar desse jeito= <a href="#" noMouseOver="abrir(esse abrir é da função criada)():"</a>--> 
+                                          
+                    </button>
+                    <div id="popup" class="popup">
+                        <a  href="javascript:fechar();"><img src="img/fechar.png" width="19px" height="15px"></a>
+                        <h3 class="titulo">informações</h3>
+                        <p class="descricao">Peacemaker traz John Cena reprisando seu papel do filme O Esquadrão Suicida: o polêmico Pacificador. Uma figura determinada a alcançar paz, não importa quantas pessoas ele tenha que matar. Na trama, o personagem é convocado por uma força tarefa improvisada do governo, sem o consentimento de Amanda Waller, para tentar impedir uma ameaça que coloca em risco a vida de muitos. Além de seus deveres patrióticos, o Pacificador também precisará resolver sua relação com seu pai (Robert Patrick), um homem extremamente frio e desonesto. O time de Waller, composto por John (Steve Agee), Leota (Danielle Brooks) e Emilia (Jennifer Holland), auxilia o Peacemaker a tomar as decisões corretas enquanto usa inteligência governamental para tentar salvar os cidadões americanos. Peacemaker também recebe a ajuda do Vigilante (Freddie Stroma), um herói com a habilidade de se recuperar rapidamente de ferimentos.</p>
+                    </div>
+                    <div id="popup2" class="popup2">
+                        <a  href="javascript:fechar2();"><img src="img/fechar.png" width="19px" height="15px"></a>
+                        <iframe width="500" height="250" src="https://www.youtube.com/embed/mlhXY6XUWBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+
+                </div> 
+            </div>               
+            </div>
+        </main>
+
+        <div class="carrosel-filmes">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img class="box-filmes" src="img/flash.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/chi.jpg">
+                </div>
+                <div class="item">
+                 <a href="#"><img class="box-filmes" src="img/pacificador.jpg"></a> 
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/venom.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/batman_vc_superman.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/arqueiro.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/esquadrao suicida.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/eternos.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/liga da justica.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/what if.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/mulher maravilha.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/homem aranha no way home1.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/lanterna verde.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/cavaleiro da lua.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/shazam.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/vingadores.jpg">
+                </div>
+                <div class="item">
+                    <img class="box-filmes" src="img/aquaman.jpg">
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!--sempre indicado por javaScript no final pois se colocar no começo e der algum erro de carregamento pode ser afetado. JavaScript é sempre o último a ser carregado na página -->
+        <script src="https://kit.fontawesome.com/12a3b11f4f.js" crossorigin="anonymous"></script><!--link do FONT AWESOME externo que trás icone para usar no prjeto-->
+        <script src="js/owl/jquery.min.js"></script>
+        <script src="js/owl/owl.carousel.min.js"></script>
+        <script src="js/owl/setup.js"></script>
+        <script type="text/javascript">
+            function abrir()
+            {
+                document.getElementById('popup').style.display='block';
+            }
+            function fechar()
+            {
+                document.getElementById('popup').style.display='none';
+            }
+            function abrir2()
+            {
+                document.getElementById('popup2').style.display='block';
+            }
+            function fechar2()
+            {
+                document.getElementById('popup2').style.display='none';
+            }
+        </script>
+    </body>
+</html>

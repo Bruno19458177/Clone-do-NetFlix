@@ -1,0 +1,228 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+    --gelo: #aaa;
+    --branco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*não deixa comos elementos rompa a caixa(tela)*/
+
+}
+
+/*Elementos base -navbar*/
+body {
+    background-color: var(--preto);
+
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--branco);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    flex-direction: row;
+    /*permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal.*/
+
+
+    /*justify-content sempre segue a direção do flex-direction, sendo assim aqui será aplicado na posição horizontal*/
+    justify-content: space-between;
+    /* justify-content justifica aonde você quer seu elemento seja colocando. space between joga-se todo para a direita criando um espaco da outra tag<>*/
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', times;
+    font-size: 40px;
+    margin-left: 25px;
+
+
+
+}
+
+header nav a
+
+/*links*/
+    {
+    text-decoration: none;
+    /* serve para tirar o risco de baixo dos links*/
+    color: var(--gelo);
+    margin-right: 15px;
+
+}
+
+header nav a:hover
+
+/*elemento -hover- tradução= flutuar é quando passar o mouse em cima fazer algo*/
+    {
+    color: var(--branco);
+}
+
+/* .titulo_filme:hover
+{
+    color:var(--gelo); -elemento -hover- tradução= flutuar é quando passar o mouse em cima fazer algo
+} */
+
+
+
+
+/*Área de Filmes*/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)100%), url('/img/imagem-pacificador1.jpg');
+    /*linear gradiente serve para criar uma especie de camada em cima da imagem.*/
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    /*background-size ele especifica o tamanho que vai ficar a imagem no seu front- o COVER renderiza a imagem no container pai(tela)*/
+
+    display: flex;
+    flex-direction: column;
+    /*justify-content sempre segue a direção do flex-direction, sendo assim aqui será aplicado na posição vertical*/
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+.filme-principal .titulo_filme {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.filme-principal .descricao {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-top: 20px;
+
+}
+
+.filme-principal .botao {
+    background-color: rgba(255, 0, 0, .40);
+    /*deixar o botão um pouco transparente */
+    border: none;
+    /*serve para tirar a borda*/
+    padding: 15px 30px;
+    border-radius: 4%;
+    border: solid 1px white;
+    color: snow;
+    margin-right: 15px;
+    font-size: 12px;
+    margin-top: 40px;
+
+    cursor: pointer;
+    /* faz com que identifique que é algo clicavel(botão)*/
+    transition: .3s ease-in;
+    /*serve para delimitar o tempo de transição de cor do botão*/
+}
+
+.botao:hover {
+    border-color: var(--vermelho);
+    background-color: rgba(255, 255, 255);
+    color: var(--preto);
+}
+
+.botoes i
+
+/*mexe nos icones do font awesome*/
+    {
+    margin-right: 5px;
+}
+
+.filme-principal .container {
+    width: 60%;
+    /*quando a tela for diminuida ela tera uma ocupação de 60%*/
+    margin-left: 60px;
+}
+
+
+/*classe para alterar o tamanho das imagem dos filmes secundários*/
+.box-filmes {
+    border-radius: 20px;
+    height: 357px;
+    width: 100%;
+    margin-top: 25px;
+    display: block;
+    /*A declaração display: block faz com que o elemento HTML seja renderizado como bloco, tal como os parágrafos e os cabeçalhos */
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    /*essas posições em zero faz com que se fique localizado no centro da tela*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    padding: 15px;
+    border: solid 1px var(--vermelho);
+    background-color: rgba(250, 250, 250, .80);
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    /* faz com que não fique visivel o pop-up*/
+}
+
+.popup .titulo {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+.popup .descricao {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+main .botao a {
+    text-decoration: none;
+    color: snow;
+
+}
+
+.botao a:hover {
+    border-color: var(--vermelho);
+    background-color: rgba(255, 255, 255);
+    color: var(--preto);
+}
+
+.popup a {
+   
+    position: relative;
+    left: 250px;
+
+}
+
+.popup2 a {
+    position: relative;
+    left: 505px;   
+   
+    bottom: 254px;
+}
+
+.popup2 {
+    position: fixed;
+    top: 0;
+    /*essas posições em zero faz com que se fique localizado no centro da tela*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    /* faz com que não fique visivel o pop-up*/
+}
+
+/*Wrapper== Envolopar  */

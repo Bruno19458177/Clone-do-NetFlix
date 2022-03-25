@@ -1,0 +1,28 @@
+@media screen and (max-width:700px)/*quer dizer- está aplicando o screen  na tela and(e) no maximo o tamanho especificado */
+{
+    header .container
+    {
+        display: flex;
+        flex-direction: column;
+        
+    }
+   
+}
+@media screen and (max-width:350px)
+{
+    header .container
+    {
+       width: auto;
+        flex-direction: column;
+    }
+   
+}
+@media screen and (min-width:540px)
+{
+    .box-filmes
+    {
+        width: 30%;
+        height: 20%;
+    }
+}
+   
